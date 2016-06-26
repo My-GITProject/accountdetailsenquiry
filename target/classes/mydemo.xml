@@ -11,6 +11,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <flow name="mydemoFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/shalaka" doc:name="HTTP"/>
         <set-payload value="{&quot;firstName&quot;:&quot;Shalaka&quot;,&quot;lastName&quot;:&quot;Kolamkar&quot;}" doc:name="Set Payload"/>
-        <http:request config-ref="HTTP_Request_Configuration" path="" method="" doc:name="HTTP"/>
+        <object-to-string-transformer doc:name="Object to String"/>
     </flow>
 </mule>
